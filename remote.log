@@ -1,0 +1,1 @@
+dea23f21-01d0-4c8e-80b4-3a73e16f78ce autoenable=true bucket=dbp.games datacenter=US encryption=none exporttree=no host=s3.unf-montreal.ca name=unf port=443 protocol=https requeststyle=path storageclass=STANDARD type=S3 timestamp=1790182649s
