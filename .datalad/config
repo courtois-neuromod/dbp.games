@@ -1,2 +1,4 @@
 [datalad "dataset"]
 	id = 3b7d8fe9-b10b-4dfc-b013-313e271de75a
+[datalad "containers.fmri-gym"]
+	image = containers/fmri_gym.sif
