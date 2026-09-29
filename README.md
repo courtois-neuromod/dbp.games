@@ -12,7 +12,7 @@ This is an approximate command, it depends on the OS and version and whatnot, th
 
 ### setup datalad reqs: can use uv or whatever you prefer.
 
-`pip install datalad git-annex datalad-containers`
+`pip install datalad git-annex datalad-container`
 
 
 `datalad install -s https://github.com/courtois-neuromod/dbp.games`
