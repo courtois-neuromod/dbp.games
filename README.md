@@ -7,7 +7,22 @@
 
 This is an approximate command, it depends on the OS and version and whatnot, the idea is to get a functional apptainer and python on the host.
 
-`apt install apptainer python`
+`apt install apptainer python fuse2fs squashfuse gocryptfs`
+
+for instance on Ubuntu 23.10+ it requires setting apparmor profile for apptainer.
+```
+sudo tee /etc/apparmor.d/apptainer << 'EOF'
+# Permit unprivileged user namespace creation for apptainer starter
+abi <abi/4.0>,
+include <tunables/global>
+profile apptainer /usr/local/{bin/apptainer,libexec/apptainer/bin/starter{,-suid}}
+    flags=(unconfined) {
+  userns,
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/apptainer>
+}
+EOF
+```
 
 
 ### setup datalad reqs: can use uv or whatever you prefer.
